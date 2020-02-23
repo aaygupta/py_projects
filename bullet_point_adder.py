@@ -1,4 +1,5 @@
 import pyperclip
+# pip install pyperclip
 
 text = pyperclip.paste()
 
