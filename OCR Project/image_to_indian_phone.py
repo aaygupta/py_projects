@@ -1,5 +1,5 @@
 from PIL import Image
-import os, pyperclip, re
+import os, pyperclip, re, send2trash
 from pytesseract import image_to_string
 
 path = os.path.dirname(os.path.realpath(__file__))
@@ -12,6 +12,8 @@ for root, dirs, filenames in os.walk(input_path):
         try:
             img = Image.open(input_path + filename)
             all_text.append(image_to_string(img))
+            # Deleting the files scanned
+            send2trash.send2trash(input_path + filename)
         except:
             continue
 
