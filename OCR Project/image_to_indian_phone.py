@@ -17,9 +17,9 @@ for root, dirs, filenames in os.walk(input_path):
         except:
             continue
 
-# +91 95959 59595
+# +91 95959 59595 or 07557575575 or 0-99555 55999
 phone_regex = re.compile(r'''(
-    (\+91)?                                     # country code
+    (\+91|0)?                                   # country code
     (\s|-|\.)?                                  # seperator
     (\d{5})                                     # 5 digits
     (\s|-|\.)?                                  # seperator
