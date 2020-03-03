@@ -1,2 +1,7 @@
 .DS_Store
 memes_instagram.py
+credentials.json
+token.json
+pyemail.py
+OWM_credentials.py
+__pycache__
