@@ -14,6 +14,8 @@ response.raise_for_status()
 
 weather_data = json.loads(response.text)
 
+# print(weather_data)
+
 print()
 print('Presently in %s ' % (location))
 print(weather_data['weather'][0]['main'], '-', weather_data['weather'][0]['description'])
