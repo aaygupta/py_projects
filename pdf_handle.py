@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog
-import os, sys, PyPDF2, docx
+import os, sys, PyPDF2, docx, subprocess, uuid
 
 root = tk.Tk()
 root.withdraw()
@@ -128,9 +128,23 @@ def pdf_compressor():
     root = tk.Tk()
     root.withdraw()
 
-pdf_to_word()
+def pdf_to_html():
+    pdf_filepath = open_pdf('Choose a PDF file to convert to HTML..').name
+    main_path = os.path.split(pdf_filepath)[0]
+    tmp = '/tmp'
+    guid = str(uuid.uuid1())
+    command = 'abiword -t %(tmp)s/%(guid)s.html %(pdf_filepath)s; cat %(tmp)s/%(guid)s.html' % locals()
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True, cwd=os.path.join(main_path,'website/templates'))
+    error = p.stderr.readlines()
+    if error:
+        raise Exception(''.join(error))
+    html = p.stdout.readlines
+    return ''.join(html)
+
+# pdf_to_word()
 # decrypt_pdf()
 # pdf_merge()
-# encrypt_pdf()
+encrypt_pdf()
 # word_to_pdf()
 # split_pdf()
+# pdf_to_html()
