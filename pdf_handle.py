@@ -143,8 +143,8 @@ def pdf_to_html():
 
 # pdf_to_word()
 # decrypt_pdf()
-# pdf_merge()
-encrypt_pdf()
+pdf_merge()
+# encrypt_pdf()
 # word_to_pdf()
 # split_pdf()
 # pdf_to_html()
