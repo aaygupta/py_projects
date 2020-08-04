@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Google Translate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <textarea wrap="soft" placeholder="Input Text" rows="12" id="input_data" class="data"></textarea>
+        <textarea wrap="soft" placeholder="Translated Text" rows="12" id="output_data" class="data"></textarea>
+    </form>
+    <div class="button">
+        <button class="button1" onclick="translate_this()">Translate</button>
+    </div>
+    <div class="box">
+        <select id="source">
+            <option value="it">it</option>
+            <option value="ar">ar</option>
+            <option value="es">es</option>
+            <option value="pt">pt</option>
+            <option value="fr">fr</option>
+            <option value="en">en</option>
+        </select>
+    </div>
+    <div class="box">
+        <select id="destination">
+            <option value="it">it</option>
+            <option value="ar">ar</option>
+            <option value="es">es</option>
+            <option value="pt">pt</option>
+            <option value="fr">fr</option>
+            <option value="en">en</option>
+        </select>
+    </div>
+    <script src="main.js" async defer></script>
+    <script type="text/javascript" src="/eel.js"></script>
+</body>
+</html>
